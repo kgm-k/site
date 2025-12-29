@@ -2,41 +2,103 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>影宮のホームページ（工事中）</title>
+  <title>影宮のホームページ</title>
   <style>
     body {
-      background-color: #ffffff;
-      color: #000000;
       font-family: "MS PGothic", "ＭＳ Ｐゴシック", sans-serif;
+      background: #ffffff;
       text-align: center;
+      color: #000;
     }
 
     .box {
-      width: 500px;
-      margin: 80px auto;
+      width: 600px;
+      margin: 60px auto;
+      border: 2px solid #000;
       padding: 20px;
-      border: 3px double #000;
     }
 
-    .blink {
-      animation: blink 1s step-start infinite;
+    .menu {
+      color: blue;
+      text-decoration: underline;
+      cursor: default;
     }
 
-    @keyframes blink {
-      50% { opacity: 0; }
+    .note {
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    #message {
+      margin-top: 10px;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
   <div class="box">
-    <h1 class="blink">工事中</h1>
-    <p>ただいまサイトを作成中です。</p>
-    <p>もうしばらくお待ちください。</p>
+    <h1>影宮のホームページ</h1>
+
+    <p>ようこそ。</p>
 
     <hr>
 
-    <p>管理人：影宮</p>
+    <!-- 飛ばないリンク風メニュー -->
+    <p class="menu">
+      自己紹介｜日記｜リンク
+    </p>
+    <p class="note">
+      ※ 現在準備中のため、リンクは使用できません。
+    </p>
+
+    <hr>
+
+    <!-- カウンター表示 -->
+    <p>
+      あなたは<br>
+      <strong id="counter"></strong>
+      人目のお客さまです
+    </p>
+
+    <!-- キリ番メッセージ -->
+    <p id="message"></p>
+
+    <p class="note">
+      ※ キリ番を踏まれた方は管理人までご連絡ください
+    </p>
+
+    <hr>
+
     <p>最終更新日：2025/12/30</p>
   </div>
+
+  <script>
+    const r = Math.random();
+    let n;
+    let isKiri = false;
+
+    if (r < 0.05) {
+      // 5%：ありえないほどデカい数字
+      n = Math.floor(Math.random() * 900000000) + 100000000;
+    } else if (r < 0.25) {
+      // 20%：キリ番が出やすい
+      const kiri = [
+        111, 222, 333, 444, 555, 666, 777, 888, 999,
+        1000, 2000, 3000, 4444, 5555, 7777, 9999
+      ];
+      n = kiri[Math.floor(Math.random() * kiri.length)];
+      isKiri = true;
+    } else {
+      // 75%：通常っぽい数字
+      n = Math.floor(Math.random() * 4000) + 1000;
+    }
+
+    document.getElementById("counter").textContent = n;
+
+    if (isKiri) {
+      document.getElementById("message").textContent =
+        "おめでとうございます！キリ番です！";
+    }
+  </script>
 </body>
 </html>

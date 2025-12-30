@@ -61,21 +61,22 @@ header {
   letter-spacing: 5px;
 }
 
+/* 画像は上に配置 */
+.profile-img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* 最新情報を右側に表示 */
 .content {
-  display: flex;          
+  display: flex;
   gap: 20px;
   align-items: flex-start;
   position: relative;
-  z-index: 1;             
-}
-
-/* 画像は上にして押しつぶされない */
-.content img {
-  width: 300px;
-  height: auto;
-  flex-shrink: 0;
-  background: #ccc;
-  margin-bottom: 20px; /* 画像とひとことの間隔 */
+  z-index: 1;  
 }
 
 .latest-info {
@@ -118,65 +119,4 @@ header {
 
 /* スマホ対応 */
 @media screen and (max-width: 600px) {
-  .content {
-    flex-direction: column;
-  }
-
-  .content img {
-    width: 100%;
-    height: auto;
-  }
-
-  .latest-info {
-    flex: none;
-    width: 100%;
-  }
-
-  .ticker {
-    font-size: 16px;
-    padding: 8px;
-  }
-
-  .ticker span {
-    animation-duration: 25s;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<header>
-  <h1>影宮のホームページ</h1>
-</header>
-
-<div class="sidebar">
-  <a href="#">▪️ トップ</a>
-  <a href="#">🔹 プロフィール（工事中）</a>
-  <a href="#">🔹 活動（工事中）</a>
-  <a href="#">🔹 日記（工事中）</a>
-  <a href="リンク集のURL.html">🔹 リンク集</a>
-</div>
-
-<div class="content-wrapper">
-  <div class="content">
-    <!-- 上に写真 -->
-    <img src="images/1767096204161.jpg" alt="プロフィール画像">
-
-    <div class="latest-info">
-      <h2>最新情報</h2>
-      <ul>
-        <li>2025/12/30 ホームページ開設</li>
-        <li>2025/12/31 リンク集追加</li>
-      </ul>
-
-      <!-- ひとこと横スクロールは画像の下 -->
-      <div class="ticker">
-        <span>管理人からのお知らせ：サイトは現在工事中です。ひとこと：コメントくれたら嬉しいです！</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-</body>
-</html>
+  .

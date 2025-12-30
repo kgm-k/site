@@ -71,7 +71,8 @@ header {
 
 .content img {
   width: 300px;
-  height: 200px;
+  height: auto;
+  flex-shrink: 0;
   background: #ccc;
 }
 
@@ -79,11 +80,13 @@ header {
   flex: 1;
 }
 
+/* 見出し */
 .latest-info h2 {
   margin-top: 0;
   font-size: 22px;   
 }
 
+/* 最新情報リスト */
 .latest-info ul {
   margin: 10px 0;
   padding-left: 20px;
@@ -91,7 +94,7 @@ header {
   line-height: 1.6;  
 }
 
-/* 横スクロール用 */
+/* 横スクロール */
 .ticker {
   white-space: nowrap;
   overflow: hidden;
@@ -99,7 +102,7 @@ header {
   padding: 10px;
   font-size: 18px;
   background: #f0f0f0;
-  margin-top: 20px; /* 上に余白を追加 */
+  margin-top: 20px; 
 }
 
 .ticker span {
@@ -140,7 +143,7 @@ header {
         <li>2025/12/31 リンク集追加</li>
       </ul>
 
-      <!-- 横スクロールは右側一番下 -->
+      <!-- 横スクロールは画像と最新情報の下に一列で配置 -->
       <div class="ticker">
         <span>管理人からのお知らせ：サイトは現在工事中です。ひとこと：こんにちは！ここは影宮のホームページです。</span>
       </div>

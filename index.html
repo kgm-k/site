@@ -6,7 +6,7 @@
 <style>
 body {
   font-family: Arial, sans-serif;
-  background: #fff; /* 全体白 */
+  background: #fff; /* 全体背景白 */
   color: #000;
   margin: 0;
   padding: 0;
@@ -37,40 +37,42 @@ header {
   margin-bottom: 15px;  
 }
 
-.content-wrapper {
-  margin-left: 200px;
+.content {
+  margin-left: 200px;   
   padding: 20px;
-  min-height: 100vh;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  background-color: #a0b0c0; /* 文字側だけくすみブルー */
 }
 
-.content-wrapper::before {
-  content: "kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm"; 
+.text-box {
+  position: relative;
+  background-color: #a0b0c0; /* 文字領域のみくすみブルー */
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.text-box::before {
+  content: "kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm";
   position: absolute;
-  top: -50px;            
-  left: -50px;           
-  font-size: 60px;       
+  top: -50px;
+  left: -50px;
+  font-size: 60px;
   color: rgba(0,0,0,0.05);
   white-space: pre-wrap;
   line-height: 70px;
-  z-index: 0;            
-  transform: rotate(-30deg);  
-  font-family: 'Courier New', monospace; 
-  letter-spacing: 5px;          
+  z-index: 0;
+  transform: rotate(-30deg);
+  font-family: 'Courier New', monospace;
+  letter-spacing: 5px;
 }
 
-.content img,
+.text-box img,
 .latest-info {
   position: relative;
   z-index: 1;
 }
 
-.content img {
+.text-box img {
   width: 300px;
   height: 200px;
   background: #ccc; /* ダミー画像 */
@@ -82,14 +84,14 @@ header {
 
 .latest-info h2 {
   margin-top: 0;
-  font-size: 22px;   
+  font-size: 22px;
 }
 
 .latest-info ul {
   margin: 10px 0;
   padding-left: 20px;
-  font-size: 18px;   
-  line-height: 1.6;  
+  font-size: 18px;
+  line-height: 1.6;
 }
 </style>
 </head>
@@ -108,8 +110,8 @@ header {
   <a href="#">🔹 リンク集</a>
 </div>
 
-<div class="content-wrapper">
-  <div class="content">
+<div class="content">
+  <div class="text-box">
     <img alt="ダミー画像">
     
     <div class="latest-info">

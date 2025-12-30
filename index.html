@@ -69,11 +69,13 @@ header {
   z-index: 1;             
 }
 
+/* 画像は上にして押しつぶされない */
 .content img {
   width: 300px;
   height: auto;
   flex-shrink: 0;
   background: #ccc;
+  margin-bottom: 20px; /* 画像とひとことの間隔 */
 }
 
 .latest-info {
@@ -92,6 +94,7 @@ header {
   line-height: 1.6;  
 }
 
+/* 横スクロール */
 .ticker {
   white-space: nowrap;
   overflow: hidden;
@@ -157,8 +160,8 @@ header {
 
 <div class="content-wrapper">
   <div class="content">
-    <!-- アップロード済み画像を使用 -->
-    <img src="1767096204161.jpg" alt="プロフィール画像">
+    <!-- 上に写真 -->
+    <img src="images/1767096204161.jpg" alt="プロフィール画像">
 
     <div class="latest-info">
       <h2>最新情報</h2>
@@ -167,9 +170,9 @@ header {
         <li>2025/12/31 リンク集追加</li>
       </ul>
 
-      <!-- 横スクロールは右側一番下 -->
+      <!-- ひとこと横スクロールは画像の下 -->
       <div class="ticker">
-        <span>管理人からのお知らせ：サイトは現在工事中です。ひとこと：こんにちは！ここは影宮のホームページです。</span>
+        <span>管理人からのお知らせ：サイトは現在工事中です。ひとこと：コメントくれたら嬉しいです！</span>
       </div>
     </div>
   </div>

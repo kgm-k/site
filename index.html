@@ -24,7 +24,7 @@ header {
   width: 150px;
   height: 100%;
   border-right: 1px solid #000;
-  background: #fff;
+  background: #f0f0f0; /* 薄灰色 */
   padding: 20px 10px;
   box-sizing: border-box;
 }
@@ -33,14 +33,15 @@ header {
   display: block;
   text-decoration: none;
   color: #000;
-  margin-bottom: 10px;
+  font-size: 18px;      /* 文字を大きく */
+  margin-bottom: 15px;  /* リンク間隔を広め */
 }
 
 .content {
   margin-left: 170px; /* sidebar幅 + 余白 */
   padding: 20px;
-  display: flex;       /* 横並びにする */
-  gap: 20px;           /* 画像と最新情報の間隔 */
+  display: flex;       /* 画像と最新情報横並び */
+  gap: 20px;
   align-items: flex-start;
 }
 
@@ -51,16 +52,19 @@ header {
 }
 
 .latest-info {
-  flex: 1; /* 残りの幅を占める */
+  flex: 1;
 }
 
 .latest-info h2 {
   margin-top: 0;
+  font-size: 22px;   /* タイトルを大きく */
 }
 
 .latest-info ul {
-  margin: 0;
+  margin: 10px 0;    /* タイトルとリストの間隔 */
   padding-left: 20px;
+  font-size: 18px;   /* リストの文字を大きく */
+  line-height: 1.6;  /* 行間を広めに */
 }
 </style>
 </head>
@@ -72,11 +76,11 @@ header {
 </header>
 
 <div class="sidebar">
-  <a href="#">▪️トップ</a>
-  <a href="#">🔹プロフィール</a>
-  <a href="#">🔹活動</a>
-  <a href="#">🔹日記</a>
-  <a href="#">🔹リンク集</a>
+  <a href="#">▪️ トップ</a>
+  <a href="#">🔹 プロフィール</a>
+  <a href="#">🔹 活動</a>
+  <a href="#">🔹 日記</a>
+  <a href="#">🔹 リンク集</a>
 </div>
 
 <div class="content">

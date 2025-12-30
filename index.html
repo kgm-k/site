@@ -43,10 +43,7 @@ header {
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  background-color: #fff; /* コンテンツ領域は白 */
+  background-color: #fff; /* 文字領域は白 */
 }
 
 .content-wrapper::before {
@@ -64,10 +61,12 @@ header {
   letter-spacing: 5px;
 }
 
-.content img,
-.latest-info {
+.content {
+  display: flex;          /* 横並び */
+  gap: 20px;
+  align-items: flex-start;
   position: relative;
-  z-index: 1; /* 背景文字より上に表示 */
+  z-index: 1;             /* 背景文字より前に表示 */
 }
 
 .content img {

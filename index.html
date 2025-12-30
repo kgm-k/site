@@ -39,20 +39,28 @@ header {
 .content {
   margin-left: 170px; /* sidebar幅 + 余白 */
   padding: 20px;
+  display: flex;       /* 横並びにする */
+  gap: 20px;           /* 画像と最新情報の間隔 */
+  align-items: flex-start;
 }
 
 .content img {
   width: 300px;
   height: 200px;
   background: #ccc; /* ダミー画像 */
-  display: block;
-  margin-bottom: 20px;
 }
 
-hr {
-  border: none;
-  border-top: 1px solid #000;
-  margin: 10px 0;
+.latest-info {
+  flex: 1; /* 残りの幅を占める */
+}
+
+.latest-info h2 {
+  margin-top: 0;
+}
+
+.latest-info ul {
+  margin: 0;
+  padding-left: 20px;
 }
 </style>
 </head>
@@ -67,22 +75,22 @@ hr {
   <a href="#">プロフィール</a>
   <a href="#">活動</a>
   <a href="#">日記</a>
-　<a href="https://kgm-k.github.io/link-to-omikuji/">リンク集</a>
+  <a href="#">リンク集</a>
 </div>
 
 <div class="content">
   <img alt="ダミー画像">
   
-  <h2>最新情報</h2>
-  <ul>
-    <li>2025/12/30 ホームページ開設</li>
-    <li>2025/12/31 サンプル情報追加予定</li>
-    <li>2026/01/01 新年イベント情報（ダミー）</li>
-    <li>2026/01/05 サンプル更新</li>
-    <li>2026/01/10 サンプル更新</li>
-  </ul>
-
-  <p>さらに情報が増えても左メニューは固定されたままです。</p>
+  <div class="latest-info">
+    <h2>最新情報</h2>
+    <ul>
+      <li>2025/12/30 ホームページ開設</li>
+      <li>2025/12/31 サンプル情報追加予定</li>
+      <li>2026/01/01 新年イベント情報（ダミー）</li>
+      <li>2026/01/05 サンプル更新</li>
+      <li>2026/01/10 サンプル更新</li>
+    </ul>
+  </div>
 </div>
 
 </body>

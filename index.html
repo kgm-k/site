@@ -6,7 +6,7 @@
 <style>
 body {
   font-family: Arial, sans-serif;
-  background: #fff; /* 全体白 */
+  background: #fff;
   color: #000;
   margin: 0;
   padding: 0;
@@ -21,7 +21,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 180px;        
+  width: 200px;        
   height: 100%;
   border-right: 1px solid #000;
   background: #f0f0f0; 
@@ -38,12 +38,12 @@ header {
 }
 
 .content-wrapper {
-  margin-left: 200px;
+  margin-left: 220px;
   padding: 20px;
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  background-color: #fff; /* コンテンツ領域は白 */
+  background-color: #fff;
 }
 
 .content-wrapper::before {
@@ -52,7 +52,7 @@ header {
   top: -50px;
   left: -50px;
   font-size: 60px;
-  color: rgba(160,176,192,0.1); /* くすみブルー、薄く */
+  color: rgba(160,176,192,0.1);
   white-space: pre-wrap;
   line-height: 70px;
   z-index: 0;
@@ -72,7 +72,7 @@ header {
 .content img {
   width: 300px;
   height: 200px;
-  background: #ccc; /* ダミー画像 */
+  background: #ccc;
 }
 
 .latest-info {
@@ -91,9 +91,26 @@ header {
   line-height: 1.6;  
 }
 
-.latest-info p {
+/* 横スクロール用 */
+.ticker {
+  white-space: nowrap;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  padding: 10px;
   font-size: 18px;
-  color: #555;
+  background: #f0f0f0;
+  margin-bottom: 15px;
+}
+
+.ticker span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
 }
 </style>
 </head>
@@ -116,8 +133,13 @@ header {
   <div class="content">
     <img alt="ダミー画像">
     
-    <div class="latest-info"
-       <h2>最新情報</h2>
+    <div class="latest-info">
+      <!-- 横スクロール表示 -->
+      <div class="ticker">
+        <span>管理人からのお知らせ：サイトは現在工事中です。ひとこと：こんにちは！ここは影宮のホームページです。</span>
+      </div>
+
+      <h2>最新情報</h2>
       <ul>
         <li>2025/12/30 ホームページ開設</li>
         <li>2025/12/31 リンク集追加</li>
@@ -128,5 +150,3 @@ header {
 
 </body>
 </html>
-
-

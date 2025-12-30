@@ -18,10 +18,14 @@
       padding: 20px;
     }
 
-    .menu {
+    .dummy {
       color: blue;
       text-decoration: underline;
       cursor: default;
+    }
+
+    a {
+      color: blue;
     }
 
     .note {
@@ -43,28 +47,29 @@
 
     <hr>
 
-    <!-- 飛ばないリンク風メニュー -->
-    <p class="menu">
-      自己紹介｜日記｜リンク
+    <!-- メニュー -->
+    <p>
+      <span class="dummy">自己紹介</span>｜
+      <span class="dummy">日記</span>｜
+      <a href="git.io">リンク</a>
     </p>
     <p class="note">
-      ※ 現在準備中のため、リンクは使用できません。
+      ※ 自己紹介・日記は準備中です
     </p>
 
     <hr>
 
-    <!-- カウンター表示 -->
+    <!-- カウンター -->
     <p>
       あなたは<br>
       <strong id="counter"></strong>
       人目のお客さまです
     </p>
 
-    <!-- キリ番メッセージ -->
     <p id="message"></p>
 
     <p class="note">
-      ※ キリ番を踏まれた方は管理人までご連絡ください
+      ※ キリ番を踏まれた方は管理人まで
     </p>
 
     <hr>
@@ -78,18 +83,15 @@
     let isKiri = false;
 
     if (r < 0.05) {
-      // 5%：ありえないほどデカい数字
       n = Math.floor(Math.random() * 900000000) + 100000000;
     } else if (r < 0.25) {
-      // 20%：キリ番が出やすい
       const kiri = [
-        111, 222, 333, 444, 555, 666, 777, 888, 999,
-        1000, 2000, 3000, 4444, 5555, 7777, 9999
+        111,222,333,444,555,666,777,888,999,
+        1000,2000,3000,4444,5555,7777,9999
       ];
       n = kiri[Math.floor(Math.random() * kiri.length)];
       isKiri = true;
     } else {
-      // 75%：通常っぽい数字
       n = Math.floor(Math.random() * 4000) + 1000;
     }
 

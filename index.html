@@ -3,50 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <title>影宮のホームページ</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 100%;
+  border-right: 1px solid #000;
+  background: #fff;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+
+.sidebar a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.content {
+  margin-left: 170px; /* sidebar幅 + 余白 */
+  padding: 20px;
+}
+
+.content img {
+  width: 300px;
+  height: 200px;
+  background: #ccc; /* ダミー画像 */
+  display: block;
+  margin-bottom: 20px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #000;
+  margin: 10px 0;
+}
+</style>
 </head>
 
-<body bgcolor="#ffffff" text="#000000">
+<body>
 
-<center>
+<header>
+  <h1>影宮のホームページ</h1>
+</header>
 
-<h1>影宮のホームページ</h1>
+<div class="sidebar">
+  <a href="#">プロフィール</a>
+  <a href="#">活動</a>
+  <a href="#">日記</a>
+　<a href="github">リンク集</a>
 
-<p>
-<a href="#">プロフィール</a>｜
-<a href="#">活動</a>｜
-<a href="#">日記</a>｜
-<a href="https://kgm-k.github.io/link-to-omikuji/">リンク</a>
-</p>
+</div>
 
-<hr width="60%">
+<div class="content">
+  <img alt="ダミー画像">
+  
+  <h2>最新情報</h2>
+  <ul>
+    <li>2025/12/30 ホームページ開設</li>
+    <li>2025/12/31 サンプル情報追加予定</li>
+    <li>2026/01/01 新年イベント情報（ダミー）</li>
+    <li>2026/01/05 サンプル更新</li>
+    <li>2026/01/10 サンプル更新</li>
+  </ul>
 
-<table border="0">
-<tr>
-<td>
-<img src="photo.jpg" width="200" alt="写真">
-</td>
-<td>
-<p>
-名前：影宮<br>
-生年月日：非公開<br>
-出身地：日本<br>
-</p>
-</td>
-</tr>
-</table>
-
-<hr width="60%">
-
-<h2>最新情報</h2>
-
-<p>
-2025年12月30日　ホームページを開設しました。<br>
-</p>
-
-<hr width="60%">
-
-
-</center>
+  <p>さらに情報が増えても左メニューは固定されたままです。</p>
+</div>
 
 </body>
 </html>

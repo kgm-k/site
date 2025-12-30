@@ -43,7 +43,7 @@ header {
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  background-color: #fff; /* 文字領域は白 */
+  background-color: #fff; /* コンテンツ領域は白 */
 }
 
 .content-wrapper::before {
@@ -62,11 +62,11 @@ header {
 }
 
 .content {
-  display: flex;          /* 横並び */
+  display: flex;          
   gap: 20px;
   align-items: flex-start;
   position: relative;
-  z-index: 1;             /* 背景文字より前に表示 */
+  z-index: 1;             
 }
 
 .content img {
@@ -90,6 +90,11 @@ header {
   font-size: 18px;   
   line-height: 1.6;  
 }
+
+.latest-info p {
+  font-size: 18px;
+  color: #555;
+}
 </style>
 </head>
 
@@ -112,13 +117,22 @@ header {
     <img alt="ダミー画像">
     
     <div class="latest-info">
+      <h2>プロフィール</h2>
+      <p>工事中です</p>
+
+      <h2>活動</h2>
+      <p>工事中です</p>
+
+      <h2>日記</h2>
+      <p>工事中です</p>
+
+      <h2>リンク集</h2>
+      <p>リンク集追加</p>
+      
       <h2>最新情報</h2>
       <ul>
         <li>2025/12/30 ホームページ開設</li>
-        <li>2025/12/31 サンプル情報追加予定</li>
-        <li>2026/01/01 新年イベント情報（ダミー）</li>
-        <li>2026/01/05 サンプル更新</li>
-        <li>2026/01/10 サンプル更新</li>
+        <li>2025/12/31 リンク集追加</li>
       </ul>
     </div>
   </div>
@@ -126,3 +140,5 @@ header {
 
 </body>
 </html>
+
+

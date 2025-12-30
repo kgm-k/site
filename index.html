@@ -80,13 +80,11 @@ header {
   flex: 1;
 }
 
-/* 見出し */
 .latest-info h2 {
   margin-top: 0;
   font-size: 22px;   
 }
 
-/* 最新情報リスト */
 .latest-info ul {
   margin: 10px 0;
   padding-left: 20px;
@@ -94,7 +92,6 @@ header {
   line-height: 1.6;  
 }
 
-/* 横スクロール */
 .ticker {
   white-space: nowrap;
   overflow: hidden;
@@ -115,6 +112,32 @@ header {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-100%); }
 }
+
+/* スマホ対応 */
+@media screen and (max-width: 600px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .content img {
+    width: 100%;
+    height: auto;
+  }
+
+  .latest-info {
+    flex: none;
+    width: 100%;
+  }
+
+  .ticker {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .ticker span {
+    animation-duration: 25s;
+  }
+}
 </style>
 </head>
 
@@ -129,13 +152,14 @@ header {
   <a href="#">🔹 プロフィール（工事中）</a>
   <a href="#">🔹 活動（工事中）</a>
   <a href="#">🔹 日記（工事中）</a>
-  <a href="https://kgm-k.github.io/link-to-omikuji/">🔹 リンク集</a>
+  <a href="リンク集のURL.html">🔹 リンク集</a>
 </div>
 
 <div class="content-wrapper">
   <div class="content">
-    <img alt="ダミー画像">
-    
+    <!-- アップロード済み画像を使用 -->
+    <img src="1767096204161.jpg" alt="プロフィール画像">
+
     <div class="latest-info">
       <h2>最新情報</h2>
       <ul>
@@ -143,7 +167,7 @@ header {
         <li>2025/12/31 リンク集追加</li>
       </ul>
 
-      <!-- 横スクロールは画像と最新情報の下に一列で配置 -->
+      <!-- 横スクロールは右側一番下 -->
       <div class="ticker">
         <span>管理人からのお知らせ：サイトは現在工事中です。ひとこと：こんにちは！ここは影宮のホームページです。</span>
       </div>

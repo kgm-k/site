@@ -6,7 +6,7 @@
 <style>
 body {
   font-family: Arial, sans-serif;
-  background: #fff;
+  background: #fff; /* 全体白 */
   color: #000;
   margin: 0;
   padding: 0;
@@ -21,10 +21,10 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 180px;        /* 左メニューを広く */
+  width: 180px;        
   height: 100%;
   border-right: 1px solid #000;
-  background: #f0f0f0; /* 薄灰色 */
+  background: #f0f0f0; 
   padding: 20px 10px;
   box-sizing: border-box;
 }
@@ -37,18 +37,19 @@ header {
   margin-bottom: 15px;  
 }
 
-.content {
-  margin-left: 200px;   
+.content-wrapper {
+  margin-left: 200px;
   padding: 20px;
-  display: flex;        
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
   gap: 20px;
   align-items: flex-start;
-  position: relative;    
-  overflow: hidden;      
-  min-height: 100vh;     /* 右全体に背景を広げる */
+  background-color: #a0b0c0; /* 文字側だけくすみブルー */
 }
 
-.content::before {
+.content-wrapper::before {
   content: "kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm"; 
   position: absolute;
   top: -50px;            
@@ -107,18 +108,20 @@ header {
   <a href="#">🔹 リンク集</a>
 </div>
 
-<div class="content">
-  <img alt="ダミー画像">
-  
-  <div class="latest-info">
-    <h2>最新情報</h2>
-    <ul>
-      <li>2025/12/30 ホームページ開設</li>
-      <li>2025/12/31 サンプル情報追加予定</li>
-      <li>2026/01/01 新年イベント情報（ダミー）</li>
-      <li>2026/01/05 サンプル更新</li>
-      <li>2026/01/10 サンプル更新</li>
-    </ul>
+<div class="content-wrapper">
+  <div class="content">
+    <img alt="ダミー画像">
+    
+    <div class="latest-info">
+      <h2>最新情報</h2>
+      <ul>
+        <li>2025/12/30 ホームページ開設</li>
+        <li>2025/12/31 サンプル情報追加予定</li>
+        <li>2026/01/01 新年イベント情報（ダミー）</li>
+        <li>2026/01/05 サンプル更新</li>
+        <li>2026/01/10 サンプル更新</li>
+      </ul>
+    </div>
   </div>
 </div>
 

@@ -1,106 +1,55 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>影宮のホームページ</title>
-  <style>
-    body {
-      font-family: "MS PGothic", "ＭＳ Ｐゴシック", sans-serif;
-      background: #ffffff;
-      text-align: center;
-      color: #000;
-    }
-
-    .box {
-      width: 600px;
-      margin: 60px auto;
-      border: 2px solid #000;
-      padding: 20px;
-    }
-
-    .dummy {
-      color: blue;
-      text-decoration: underline;
-      cursor: default;
-    }
-
-    a {
-      color: blue;
-    }
-
-    .note {
-      font-size: 12px;
-      margin-top: 10px;
-    }
-
-    #message {
-      margin-top: 10px;
-      font-weight: bold;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>影宮のホームページ</title>
 </head>
-<body>
-  <div class="box">
-    <h1>影宮のホームページ</h1>
 
-    <p>ようこそ。</p>
+<body bgcolor="#ffffff" text="#000000">
 
-    <hr>
+<center>
 
-    <!-- メニュー -->
-    <p>
-      <span class="dummy">自己紹介</span>｜
-      <span class="dummy">日記</span>｜
-      <a href="https://kgm-k.github.io/link-to-omikuji/">リンク</a>
-    </p>
-    <p class="note">
-      ※ 自己紹介・日記は準備中です
-    </p>
+<h1>影宮のホームページ</h1>
 
-    <hr>
+<p>
+<a href="profile.html">プロフィール</a>｜
+<a href="works.html">活動</a>｜
+<a href="diary.html">日記</a>｜
+<a href="https://kgm-k.github.io/link-to-omikuji/">リンク</a>
+</p>
 
-    <!-- カウンター -->
-    <p>
-      あなたは<br>
-      <strong id="counter"></strong>
-      人目のお客さまです
-    </p>
+<hr width="60%">
 
-    <p id="message"></p>
+<table border="0">
+<tr>
+<td>
+<img src="photo.jpg" width="200" alt="写真">
+</td>
+<td>
+<p>
+名前：影宮<br>
+生年月日：非公開<br>
+出身地：日本<br>
+</p>
+</td>
+</tr>
+</table>
 
-    <p class="note">
-      ※ キリ番を踏まれた方は管理人まで
-    </p>
+<hr width="60%">
 
-    <hr>
+<h2>最新情報</h2>
 
-    <p>最終更新日：2025/12/30</p>
-  </div>
+<p>
+2025年12月30日　ホームページを開設しました。<br>
+</p>
 
-  <script>
-    const r = Math.random();
-    let n;
-    let isKiri = false;
+<hr width="60%">
 
-    if (r < 0.05) {
-      n = Math.floor(Math.random() * 900000000) + 100000000;
-    } else if (r < 0.25) {
-      const kiri = [
-        111,222,333,444,555,666,777,888,999,
-        1000,2000,3000,4444,5555,7777,9999
-      ];
-      n = kiri[Math.floor(Math.random() * kiri.length)];
-      isKiri = true;
-    } else {
-      n = Math.floor(Math.random() * 4000) + 1000;
-    }
+<p>
+このホームページはリンクフリーです。<br>
+</p>
 
-    document.getElementById("counter").textContent = n;
+</center>
 
-    if (isKiri) {
-      document.getElementById("message").textContent =
-        "おめでとうございます！キリ番です！";
-    }
-  </script>
 </body>
 </html>

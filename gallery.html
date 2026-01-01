@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>影宮のホームページ｜ギャラリー</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* 左メニュー */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  border-right: 1px solid #000;
+  background: #f0f0f0;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+
+.sidebar a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.sidebar a:hover {
+  background: #ddd;
+}
+
+/* 右側 */
+.content-wrapper {
+  margin-left: 220px;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+/* ギャラリー本体 */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #000;
+  background: #eee;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 15px 0;
+  border-top: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* スマホ対応 */
+@media screen and (max-width: 600px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #000;
+  }
+
+  .content-wrapper {
+    margin-left: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>影宮のホームページ</h1>
+</header>
+
+<div class="sidebar">
+  <a href="index.html">▪️ トップ</a>
+  <a href="#">🔹 プロフィール（工事中）</a>
+  <a href="#">🔹 活動（工事中）</a>
+  <a href="#">🔹 日記（工事中）</a>
+  <a href="gallery.html">🔹 ギャラリー</a>
+  <a href="https://kgm-k.github.io/link-to-omikuji/">🔹 リンク集</a>
+</div>
+
+<div class="content-wrapper">
+  <h2>ギャラリー</h2>
+
+  <p>※ 画像は順次追加予定です。</p>
+
+  <div class="gallery">
+    <img src="1767096204161.jpg" alt="">
+    <img src="images/sample1.jpg" alt="">
+    <img src="images/sample2.jpg" alt="">
+  </div>
+
+  <footer>
+    © 2025 影宮
+  </footer>
+</div>
+
+</body>
+</html>

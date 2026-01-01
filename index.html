@@ -21,10 +21,10 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 200px;        
+  width: 200px;
   height: 100%;
   border-right: 1px solid #000;
-  background: #f0f0f0; 
+  background: #f0f0f0;
   padding: 20px 10px;
   box-sizing: border-box;
 }
@@ -33,8 +33,12 @@ header {
   display: block;
   text-decoration: none;
   color: #000;
-  font-size: 18px;      
-  margin-bottom: 15px;  
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.sidebar a:hover {
+  background: #ddd;
 }
 
 .content-wrapper {
@@ -47,7 +51,7 @@ header {
 }
 
 .content-wrapper::before {
-  content: "kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm"; 
+  content: "kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm";
   position: absolute;
   top: -50px;
   left: -50px;
@@ -61,12 +65,35 @@ header {
   letter-spacing: 5px;
 }
 
+.ticker {
+  white-space: nowrap;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 18px;
+  background: #f0f0f0;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.ticker span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
 .content {
-  display: flex;          
+  display: flex;
   gap: 20px;
   align-items: flex-start;
   position: relative;
-  z-index: 1;             
+  z-index: 1;
 }
 
 .content img {
@@ -82,60 +109,49 @@ header {
 
 .latest-info h2 {
   margin-top: 0;
-  font-size: 22px;   
+  font-size: 22px;
 }
 
 .latest-info ul {
   margin: 10px 0;
   padding-left: 20px;
-  font-size: 18px;   
-  line-height: 1.6;  
-}
-
-.ticker {
-  white-space: nowrap;
-  overflow: hidden;
-  border: 1px solid #ccc;
-  padding: 10px;
   font-size: 18px;
-  background: #f0f0f0;
-  margin-bottom: 20px; 
+  line-height: 1.6;
 }
 
-.ticker span {
-  display: inline-block;
-  padding-left: 100%;
-  animation: scroll 20s linear infinite;
+.latest-info a {
+  color: #000;
+  text-decoration: underline;
 }
 
-@keyframes scroll {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-100%); }
+footer {
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+  border-top: 1px solid #ccc;
+  font-size: 14px;
 }
 
 /* スマホ対応 */
 @media screen and (max-width: 600px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #000;
+  }
+
+  .content-wrapper {
+    margin-left: 0;
+  }
+
   .content {
     flex-direction: column;
   }
 
   .content img {
     width: 100%;
-    height: auto;
-  }
-
-  .latest-info {
-    flex: none;
-    width: 100%;
-  }
-
-  .ticker {
-    font-size: 16px;
-    padding: 8px;
-  }
-
-  .ticker span {
-    animation-duration: 25s;
   }
 }
 </style>
@@ -148,22 +164,23 @@ header {
 </header>
 
 <div class="sidebar">
-  <a href="#">▪️ トップ</a>
+  <a href="index.html">▪️ トップ</a>
   <a href="#">🔹 プロフィール（工事中）</a>
   <a href="#">🔹 活動（工事中）</a>
   <a href="#">🔹 日記（工事中）</a>
+  <a href="gallery.html">🔹 ギャラリー</a>
   <a href="https://kgm-k.github.io/link-to-omikuji/">🔹 リンク集</a>
 </div>
 
 <div class="content-wrapper">
 
-  <!-- 管理人コメントをヘッダー下に配置 -->
+  <!-- 管理人コメント -->
   <div class="ticker">
-    <span>管理人からのお知らせ：サイトは現在工事中です。　ひとこと：こんにちは！コメントもらえると嬉しいです！</span>
+    <span>管理人からのお知らせ：サイトは現在工事中です。ひとこと：こんにちは！ここは影宮のホームページです。</span>
   </div>
 
   <div class="content">
-    <!-- アップロード済み画像を使用 -->
+    <!-- プロフィール画像 -->
     <img src="1767096204161.jpg" alt="プロフィール画像">
 
     <div class="latest-info">
@@ -171,9 +188,14 @@ header {
       <ul>
         <li>2025/12/30 ホームページ開設</li>
         <li>2025/12/31 リンク集追加</li>
+        <li>2026/01/01 ギャラリーを追加</a></li>
       </ul>
     </div>
   </div>
+
+  <footer>
+    © 2025 影宮
+  </footer>
 
 </div>
 

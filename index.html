@@ -17,6 +17,7 @@ header {
   padding: 20px 0;
 }
 
+/* 左メニュー */
 .sidebar {
   position: fixed;
   top: 0;
@@ -41,6 +42,7 @@ header {
   background: #ddd;
 }
 
+/* 右側全体 */
 .content-wrapper {
   margin-left: 220px;
   padding: 20px;
@@ -50,6 +52,7 @@ header {
   background-color: #fff;
 }
 
+/* 背景の kgm */
 .content-wrapper::before {
   content: "kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm kgm";
   position: absolute;
@@ -61,10 +64,11 @@ header {
   line-height: 70px;
   z-index: 0;
   transform: rotate(-30deg);
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   letter-spacing: 5px;
 }
 
+/* 管理人コメント */
 .ticker {
   white-space: nowrap;
   overflow: hidden;
@@ -88,6 +92,7 @@ header {
   100% { transform: translateX(-100%); }
 }
 
+/* 画像＋最新情報 */
 .content {
   display: flex;
   gap: 20px;
@@ -101,6 +106,14 @@ header {
   height: auto;
   flex-shrink: 0;
   background: #ccc;
+}
+
+/* 写真の説明 */
+.photo-note {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+  line-height: 1.4;
 }
 
 .latest-info {
@@ -124,6 +137,7 @@ header {
   text-decoration: underline;
 }
 
+/* フッター */
 footer {
   text-align: center;
   padding: 15px 0;
@@ -166,7 +180,6 @@ footer {
 <div class="sidebar">
   <a href="index.html">▪️ トップ</a>
   <a href="#">🔹 プロフィール（工事中）</a>
-  <a href="#">🔹 活動（工事中）</a>
   <a href="#">🔹 日記（工事中）</a>
   <a href="gallery.html">🔹 ギャラリー</a>
   <a href="https://kgm-k.github.io/link-to-omikuji/">🔹 リンク集</a>
@@ -180,8 +193,13 @@ footer {
   </div>
 
   <div class="content">
-    <!-- プロフィール画像 -->
-    <img src="1767096204161.jpg" alt="プロフィール画像">
+    <div>
+      <img src="1767096204161.jpg" alt="プロフィール画像">
+      <p class="photo-note">
+        ※ goghのスクリーンショットです<br>
+        フレコ？は追記します
+      </p>
+    </div>
 
     <div class="latest-info">
       <h2>最新情報</h2>
